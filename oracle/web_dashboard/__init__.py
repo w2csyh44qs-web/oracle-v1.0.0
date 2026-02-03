@@ -9,7 +9,7 @@ Provides real-time monitoring and command execution via web interface:
 - Mobile-responsive design
 
 Usage:
-    from oracle.dashboard import DashboardServer
+    from oracle.web_dashboard import DashboardServer
 
     server = DashboardServer(project_root)
     server.start(port=7777)
@@ -18,7 +18,7 @@ Author: Oracle Brain Cell Architecture (P31 Phase 2)
 """
 
 try:
-    from oracle.dashboard.server.app import DashboardServer
+    from oracle.web_dashboard.server.app import DashboardServer
     __all__ = ["DashboardServer"]
 except ImportError:
     # Flask dependencies not installed

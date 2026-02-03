@@ -73,7 +73,7 @@ git commit -m "Your message"
 ### Terminal Dashboard
 Lightweight monitoring with command palette:
 ```bash
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 # Press ':' for command mode
 # Press 'd' for diagnostics
 ```
@@ -152,7 +152,7 @@ oracle status                       # Project status
 oracle verify                       # Integrity verification
 
 # Monitoring
-python3 oracle/seeg.py              # Terminal dashboard
+python3 oracle/sEEG.py              # Terminal dashboard
 ```
 
 ---

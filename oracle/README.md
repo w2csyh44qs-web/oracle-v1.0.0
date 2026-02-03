@@ -78,7 +78,7 @@ python3 oracle/cli.py dashboard start
 # Open: http://localhost:7777
 
 # Or use terminal dashboard
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 # Press ':' for command palette
 ```
 
@@ -241,15 +241,15 @@ python3 oracle/project_oracle.py verify --fix --apply
 
 ### 6. Real-Time Monitoring
 
-**Terminal Dashboard (seeg):**
+**Terminal Dashboard (sEEG):**
 ```bash
 # Launch real-time monitor
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 
 # Different modes
-python3 oracle/seeg.py --mode compact
-python3 oracle/seeg.py --mode split
-python3 oracle/seeg.py --mode min
+python3 oracle/sEEG.py --mode compact
+python3 oracle/sEEG.py --mode split
+python3 oracle/sEEG.py --mode min
 
 # Command palette (P31)
 # Press ':' to enter command mode
@@ -388,7 +388,7 @@ oracle/
 ├── daemon/             # Background daemon (P31)
 │   ├── oracle_daemon.py    # Daemon wrapper
 │   └── service_manager.py  # System service integration
-├── dashboard/          # Web dashboard (P31)
+├── web_dashboard/      # Web dashboard (P31)
 │   ├── server/
 │   │   └── app.py      # Flask + SocketIO server
 │   └── static/         # HTML/CSS/JS frontend
@@ -425,7 +425,7 @@ oracle/
 ├── reports/            # Audit reports (excluded from git)
 ├── cli.py              # CLI entry point
 ├── project_oracle.py   # Main orchestrator
-└── seeg.py             # Real-time terminal monitor (P31: command palette)
+└── sEEG.py             # Real-time terminal monitor (P31: command palette)
 ```
 
 ---
@@ -552,7 +552,7 @@ oracle/context/daemon.py spawn <ctx>    # Spawn session
 oracle/context/daemon.py messages       # View messages
 
 # Monitoring
-oracle/seeg.py                          # Launch terminal monitor
+oracle/sEEG.py                          # Launch terminal monitor
 # Press ':' for command palette (P31)
 # Press 'd' for diagnostics
 # Press 'q' to quit

@@ -57,14 +57,14 @@ sEEG is included with Oracle core—no additional dependencies.
 
 **Verify:**
 ```bash
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 ```
 
 ### Starting sEEG
 
 **Basic Start:**
 ```bash
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 ```
 
 **From Oracle CLI:**
@@ -214,11 +214,11 @@ python3 oracle/cli.py daemon start
 **Terminal Multiplexer Integration:**
 ```bash
 # tmux
-tmux new-session -s oracle 'python3 oracle/seeg.py'
+tmux new-session -s oracle 'python3 oracle/sEEG.py'
 tmux attach -t oracle
 
 # screen
-screen -S oracle -dm python3 oracle/seeg.py
+screen -S oracle -dm python3 oracle/sEEG.py
 screen -r oracle
 ```
 
@@ -283,7 +283,7 @@ pip install flask flask-socketio flask-cors python-socketio
 
 **Verify Installation:**
 ```bash
-python3 -c "from oracle.dashboard import DashboardServer; print('✅ Dashboard available')"
+python3 -c "from oracle.web_dashboard import DashboardServer; print('✅ Dashboard available')"
 ```
 
 ### Starting the Dashboard
@@ -537,7 +537,7 @@ python3 oracle/cli.py dashboard start --host 0.0.0.0
 **Security Warning:** This exposes dashboard to your network. Consider firewall rules, VPN access only.
 
 **Custom Themes:**
-Dashboard CSS is in `oracle/dashboard/static/css/terminal.css`.
+Dashboard CSS is in `oracle/web_dashboard/static/css/terminal.css`.
 
 **Color scheme:**
 - Background: `#000` (pure black)
@@ -691,7 +691,7 @@ curl http://localhost:7777/api/status | jq .
 python3 oracle/cli.py daemon start
 
 # Terminal 2: Run sEEG for active monitoring
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 
 # Browser: Open web dashboard for visual overview
 open http://localhost:7777
@@ -774,7 +774,7 @@ A: Web dashboard can be embedded via iframe or API. sEEG is standalone terminal 
 
 ```bash
 # Start sEEG
-python3 oracle/seeg.py
+python3 oracle/sEEG.py
 
 # Keyboard shortcuts
 q         # Quit

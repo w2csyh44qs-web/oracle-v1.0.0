@@ -82,8 +82,8 @@ class DashboardServer:
         # Flask app setup
         self.app = Flask(
             __name__,
-            template_folder=str(self.oracle_dir / "dashboard" / "static"),
-            static_folder=str(self.oracle_dir / "dashboard" / "static"),
+            template_folder=str(self.oracle_dir / "web_dashboard" / "static"),
+            static_folder=str(self.oracle_dir / "web_dashboard" / "static"),
         )
         self.app.config["SECRET_KEY"] = "oracle-dashboard-secret"
 
@@ -118,19 +118,19 @@ class DashboardServer:
         @self.app.route("/")
         def index():
             """Serve dashboard UI."""
-            static_dir = self.oracle_dir / "dashboard" / "static"
+            static_dir = self.oracle_dir / "web_dashboard" / "static"
             return send_from_directory(static_dir, "index.html")
 
         @self.app.route("/css/<path:filename>")
         def serve_css(filename):
             """Serve CSS files."""
-            static_dir = self.oracle_dir / "dashboard" / "static" / "css"
+            static_dir = self.oracle_dir / "web_dashboard" / "static" / "css"
             return send_from_directory(static_dir, filename)
 
         @self.app.route("/js/<path:filename>")
         def serve_js(filename):
             """Serve JS files."""
-            static_dir = self.oracle_dir / "dashboard" / "static" / "js"
+            static_dir = self.oracle_dir / "web_dashboard" / "static" / "js"
             return send_from_directory(static_dir, filename)
 
         @self.app.route("/api/status")

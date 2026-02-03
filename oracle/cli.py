@@ -32,7 +32,7 @@ from oracle.daemon import OracleDaemonService, ServiceManager
 
 # Dashboard import (optional - requires Flask)
 try:
-    from oracle.dashboard import DashboardServer
+    from oracle.web_dashboard import DashboardServer
 except ImportError:
     DashboardServer = None
 
