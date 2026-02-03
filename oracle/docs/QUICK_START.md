@@ -283,7 +283,7 @@ pip install flask flask-socketio flask-cors python-socketio
 ### Learn More
 
 - [Daemon Guide](DAEMON_GUIDE.md) - Deep dive into daemon management
-- [Monitoring Guide](MONITORING_GUIDE.md) - sEEG (terminal) and web dashboard options
+- [Dashboard Guide](DASHBOARD_GUIDE.md) - sEEG (terminal) and web dashboard options
 - [Git Integration](GIT_INTEGRATION.md) - Git hooks and workflow integration
 
 ### Advanced Usage
