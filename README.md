@@ -34,11 +34,48 @@ That's it! Oracle is now monitoring your project automatically.
 
 Once initialized, Oracle automatically:
 
+- **🔍 Analyzes** - Health scores, circular dependencies, complexity metrics
 - **🧠 Learns** - Captures development patterns and decisions
-- **🔍 Monitors** - Tracks file changes and health metrics
-- **🪝 Verifies** - Git hooks check commits automatically
-- **🌐 Dashboard** - Web UI at localhost:7777
+- **🪝 Verifies** - Git hooks check commits automatically (<5s)
+- **🌐 Dashboard** - Real-time monitoring at localhost:7777
 - **⚡ Daemon** - Background monitoring 24/7
+- **🛠️ Auto-Fixes** - Preview and apply code improvements
+
+---
+
+## Code Analysis & Quality
+
+Oracle provides **automated code review** for solo developers and small teams:
+
+### Health Monitoring
+Continuous codebase health tracking with actionable insights:
+```bash
+python3 oracle/project_oracle.py audit --quick  # Get health score (0-100)
+```
+- **Issue categorization** - Critical, warnings, optimizations
+- **Trend tracking** - Monitor health over time
+- **Auto-fix suggestions** - Preview and apply fixes automatically
+
+### Integrity Verification
+Detect problems before they become bugs:
+```bash
+python3 oracle/project_oracle.py verify
+```
+- **Circular dependency detection** - Find import cycles
+- **Performance regression tracking** - Baseline comparisons
+- **Auto-fix with preview** - See changes before applying
+
+### Codebase Assessment
+Deep analysis of your project structure:
+```bash
+python3 oracle/project_oracle.py assess --graph
+```
+- **Import analysis** - Understand module dependencies
+- **Call graph generation** - Visualize code relationships
+- **CI/CD template generation** - GitHub/GitLab workflows
+- **Complexity metrics** - Identify hotspots
+
+**Why this matters:** Get instant code review without enterprise tools like SonarQube or CodeScene. Perfect for solo developers who need quality checks without the overhead.
 
 ---
 

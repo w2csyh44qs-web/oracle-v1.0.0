@@ -13,6 +13,7 @@ Oracle is an autonomous project management and intelligence system that provides
 
 Oracle transforms how you manage and maintain Python projects by:
 
+- **🔬 Code Analysis** - Health scores, circular dependencies, auto-fix suggestions
 - **🧠 Automatic Memory** - Captures and learns from every session without manual updates
 - **🚀 Project-Agnostic** - Deploys onto ANY Python project with `oracle init`
 - **🔍 Semantic Search** - Find patterns and decisions across your entire project history
@@ -25,11 +26,12 @@ Oracle transforms how you manage and maintain Python projects by:
 ### Why Oracle?
 
 Traditional project management tools require constant manual updates and context switching. Oracle automatically:
-- Tracks file changes, tool usage, and architectural decisions
-- Maintains cross-session memory with semantic search
-- Updates human-readable documentation automatically
-- Provides health monitoring and integrity verification
-- Enables intelligent context-aware resume prompts
+- **Analyzes code quality** - Health monitoring, circular dependency detection, complexity metrics
+- **Tracks file changes** - Tool usage, architectural decisions, development patterns
+- **Maintains cross-session memory** - Semantic search across your entire project history
+- **Updates documentation automatically** - Human-readable context files stay current
+- **Verifies integrity** - Performance regression tracking, auto-fix suggestions
+- **Enables intelligent resume prompts** - Context-aware session handoffs
 
 ### "Set and Forget" Operation
 
