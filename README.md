@@ -45,45 +45,47 @@ Once initialized, Oracle automatically:
 
 ## Code Analysis & Quality
 
-Oracle provides **automated code review** for solo developers and small teams:
+Oracle provides **automated code review** that runs in the background while you code:
 
 ### Health Monitoring
-Continuous codebase health tracking with actionable insights:
+Get instant feedback on code quality without manual checks:
 ```bash
-python3 oracle/project_oracle.py audit --quick  # Get health score (0-100)
+python3 oracle/project_oracle.py audit --quick  # <5 seconds
 ```
+- **0-100 health score** - Clear, actionable metric for code quality
 - **Issue categorization** - Critical, warnings, optimizations
-- **Trend tracking** - Monitor health over time
-- **Auto-fix suggestions** - Preview and apply fixes automatically
+- **Trend tracking** - See if your codebase is improving or degrading
+- **Auto-fix suggestions** - Preview and apply fixes with one command
 
 ### Integrity Verification
-Detect problems before they become bugs:
+Catch structural issues before they cause runtime errors:
 ```bash
-python3 oracle/project_oracle.py verify
+python3 oracle/project_oracle.py verify  # Runs automatically on git commit
 ```
-- **Circular dependency detection** - Find import cycles
-- **Performance regression tracking** - Baseline comparisons
-- **Auto-fix with preview** - See changes before applying
+- **Circular dependency detection** - Find and fix import cycles automatically
+- **Performance regression tracking** - Get alerted when code gets slower
+- **Auto-fix with preview** - Review proposed changes before applying
 
 ### Codebase Assessment
-Deep analysis of your project structure:
+Understand your project's architecture in seconds:
 ```bash
 python3 oracle/project_oracle.py assess --graph
 ```
-- **Import analysis** - Understand module dependencies
-- **Call graph generation** - Visualize code relationships
-- **CI/CD template generation** - GitHub/GitLab workflows
-- **Complexity metrics** - Identify hotspots
+- **Dependency visualization** - See how your modules connect
+- **Complexity hotspots** - Find files that need refactoring
+- **CI/CD templates** - Generate GitHub Actions/GitLab CI configs
+- **Export graphs** - Share architecture diagrams with your team
 
-**Why this matters:** Get instant code review without enterprise tools like SonarQube or CodeScene. Perfect for solo developers who need quality checks without the overhead.
+**Why Oracle?** Enterprise-grade code analysis (SonarQube, CodeScene) without the complexity or cost. Perfect for solo developers and small teams who want quality gates without the overhead.
 
 ---
 
 ## Core Features
 
 ### Automatic Memory System
-Every session is automatically captured with semantic search:
+Every session is automatically captured and searchable:
 ```bash
+# Search observations
 python3 oracle/memory/hippocampus.py search "API changes"
 ```
 
@@ -257,35 +259,14 @@ oracle daemon install
 
 **v1.0.0** - February 2026
 
-**What's New:**
-- ✅ Complete P30 (Memory + Bootstrap)
-- ✅ Complete P31 (Daemon + Dashboard + Git Hooks)
+**Features:**
+- ✅ Automatic memory system with semantic search
+- ✅ Project-agnostic bootstrap
+- ✅ Background daemon with auto-start
+- ✅ Web and terminal dashboards
+- ✅ Git hooks integration
 - ✅ "Set and Forget" operation
 - ✅ Full documentation (4 guides, 2150+ lines)
-
----
-
-## Support Oracle Development
-
-If Oracle saves you time and helps your projects, consider sponsoring its development:
-
-[![Sponsor](https://img.shields.io/badge/Sponsor-Oracle-ea4aaa?logo=github-sponsors&style=for-the-badge)](https://github.com/sponsors/w2csyh44qs-web)
-
-**Why sponsor?**
-- ⚡ Keeps Oracle actively maintained
-- 🚀 Enables new features and improvements
-- 📚 Supports comprehensive documentation
-- 🐛 Faster bug fixes and support
-- 🌟 Shows appreciation for open source work
-
-**Your support helps with:**
-- Ongoing maintenance and testing across different projects
-- Development of new features (multi-language support, cloud sync)
-- Documentation improvements and video tutorials
-- Priority support for sponsors
-- Framework and tool detection expansion
-
-Even small monthly contributions make a big difference! 🙏
 
 ---
 
@@ -312,6 +293,8 @@ MIT License - See [LICENSE](LICENSE) for details
 - **Documentation:** [oracle/docs/](oracle/docs/)
 - **Issues:** https://github.com/anthropics/oracle/issues
 - **Quick Start:** [oracle/docs/QUICK_START.md](oracle/docs/QUICK_START.md)
+
+---
 
 ---
 

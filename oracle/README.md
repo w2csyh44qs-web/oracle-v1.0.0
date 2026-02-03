@@ -16,7 +16,7 @@ Oracle transforms how you manage and maintain Python projects by:
 - **🔬 Code Analysis** - Health scores, circular dependencies, auto-fix suggestions
 - **🧠 Automatic Memory** - Captures and learns from every session without manual updates
 - **🚀 Project-Agnostic** - Deploys onto ANY Python project with `oracle init`
-- **🔍 Semantic Search** - Find patterns and decisions across your entire project history
+- **🔍 Search & Memory** - Find patterns and decisions across your entire project history
 - **🤖 Self-Improving** - Automatically updates context files based on observations
 - **⚡ Performance** - 92% reduction in scanned files, sub-2s initialization
 - **🔄 Auto-Start Daemon** - Background monitoring with system boot integration
@@ -28,7 +28,7 @@ Oracle transforms how you manage and maintain Python projects by:
 Traditional project management tools require constant manual updates and context switching. Oracle automatically:
 - **Analyzes code quality** - Health monitoring, circular dependency detection, complexity metrics
 - **Tracks file changes** - Tool usage, architectural decisions, development patterns
-- **Maintains cross-session memory** - Semantic search across your entire project history
+- **Maintains cross-session memory** - Search across your entire project history
 - **Updates documentation automatically** - Human-readable context files stay current
 - **Verifies integrity** - Performance regression tracking, auto-fix suggestions
 - **Enables intelligent resume prompts** - Context-aware session handoffs
@@ -365,7 +365,7 @@ Oracle uses a brain cell architecture where each module represents a specialized
 | **Oligodendrocytes** | Myelin producers | Optimize API efficiency |
 | **Ependymal** | CSF producers | Document flow, keep docs fresh |
 | **Schwann Cells** | Signal transmission | File change detection |
-| **Hippocampus** | Memory (LOCATION) | Learn patterns, semantic search |
+| **Hippocampus** | Memory (LOCATION) | Learn patterns, search observations |
 | **Cortex** | Long-term storage (LOCATION) | Project-specific intelligence |
 | **sEEG** | Electrodes | Real-time monitoring |
 | **Helicase** | DNA unwinder | Assess new codebases |
@@ -722,11 +722,9 @@ python3 oracle/cli.py init .
 
 ## Roadmap
 
-### v1.1 (Future)
+### Future Enhancements
 - Additional framework support
 - Enhanced pattern detection
-- Dashboard authentication and security
-- Memory visualization improvements
 - Team collaboration features
 
 ### v2.0 (Future)
@@ -742,7 +740,7 @@ python3 oracle/cli.py init .
 ### v1.0.0 (February 2026)
 
 **Core Features (P30):**
-- ✅ Automatic memory system with semantic search
+- ✅ Automatic memory system with search
 - ✅ Project-agnostic bootstrap (`oracle init`)
 - ✅ Auto-context updates with pattern detection
 - ✅ Cross-session orchestration
