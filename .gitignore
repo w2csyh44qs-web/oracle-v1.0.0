@@ -30,9 +30,30 @@ oracle/data/*.pid
 oracle/data/*.txt
 oracle/config/oracle_config.json
 oracle/config/project_config.json
+oracle/config/layer_registry.json
+oracle/context/context_registry.json
 oracle/reports/*.json
 oracle/reports/*.md
 oracle/reports/*.html
+oracle/maintenance/config.json
+oracle/maintenance/reports/
+
+# Oracle Project-Specific Docs (exclude from public repo)
+oracle/docs/archive/
+oracle/docs/context/
+oracle/docs/overview/
+oracle/docs/code only/
+oracle/docs/CHANGELOG.md
+oracle/docs/README.md
+oracle/docs/*_GOATED.md
+oracle/dashboard/*.png
+oracle/dashboard/*.jpg
+
+# Oracle Project-Specific Plans (exclude Goated plans, keep Oracle P30/P31)
+oracle/docs/plans/DB8c*.md
+oracle/docs/plans/P2[1-9]*.md
+oracle/docs/plans/PHASE_*.md
+oracle/docs/plans/V2_*.md
 
 # Oracle Structure (keep these)
 !oracle/data/.gitkeep
