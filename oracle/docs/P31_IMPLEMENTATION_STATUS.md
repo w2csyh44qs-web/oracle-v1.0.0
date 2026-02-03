@@ -261,11 +261,13 @@ pip install flask flask-socketio flask-cors python-socketio
    - ✅ Security considerations
    - ✅ Best practices and FAQ
 
-3. **oracle/docs/DASHBOARD_GUIDE.md** (~650 lines)
-   - ✅ Dashboard installation and setup
-   - ✅ Interface walkthrough (Full/Compact views)
-   - ✅ Real-time updates via WebSocket
-   - ✅ Running commands from browser
+3. **oracle/docs/MONITORING_GUIDE.md** (~1,200 lines)
+   - ✅ sEEG (terminal dashboard) comprehensive documentation
+   - ✅ Web dashboard installation and setup
+   - ✅ Interface walkthrough (Full/Compact views for both)
+   - ✅ Real-time updates via WebSocket (web) and polling (sEEG)
+   - ✅ Running commands from browser or terminal
+   - ✅ Comparison guide to help users choose between options
    - ✅ Responsive design details
    - ✅ API reference
    - ✅ Customization and theming

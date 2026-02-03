@@ -49,11 +49,8 @@ oracle/docs/*_GOATED.md
 oracle/dashboard/*.png
 oracle/dashboard/*.jpg
 
-# Oracle Project-Specific Plans (exclude Goated plans, keep Oracle P30/P31)
-oracle/docs/plans/DB8c*.md
-oracle/docs/plans/P2[1-9]*.md
-oracle/docs/plans/PHASE_*.md
-oracle/docs/plans/V2_*.md
+# Oracle Project-Specific Plans (exclude all project-specific plans)
+oracle/docs/plans/
 
 # Oracle Structure (keep these)
 !oracle/data/.gitkeep

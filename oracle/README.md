@@ -400,7 +400,7 @@ oracle/
 │   ├── plans/          # Project plans
 │   ├── QUICK_START.md  # 5-minute setup guide (P31)
 │   ├── DAEMON_GUIDE.md # Daemon documentation (P31)
-│   ├── DASHBOARD_GUIDE.md # Dashboard guide (P31)
+│   ├── MONITORING_GUIDE.md # sEEG + Web dashboard guide (P31)
 │   └── GIT_INTEGRATION.md # Git hooks guide (P31)
 ├── maintenance/        # Health & cleanup
 │   └── microglia.py    # Audit system

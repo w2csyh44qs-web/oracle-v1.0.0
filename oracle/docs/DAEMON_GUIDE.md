@@ -484,7 +484,7 @@ Ensure these are not world-readable if project contains sensitive info.
 
 Daemon itself does **not** expose any network ports. It's purely local.
 
-Web dashboard (separate process) exposes port 7777 by default. See [Dashboard Guide](DASHBOARD_GUIDE.md) for security best practices.
+Web dashboard (separate process) exposes port 7777 by default. See [Monitoring Guide](MONITORING_GUIDE.md) for security best practices.
 
 ---
 
