@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Oracle Dashboard</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>🧠 ORACLE DASHBOARD</h1>
+            <div class="header-controls">
+                <div class="view-switcher">
+                    <button class="view-btn active" data-view="full" onclick="setView('full')">Full</button>
+                    <button class="view-btn" data-view="compact" onclick="setView('compact')">Compact</button>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span id="status-text">Connecting...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Single Panel View -->
+        <div class="main-panel">
+            <!-- Status Section -->
+            <div class="status-section">
+                <!-- Health Score -->
+                <div class="metric-inline">
+                    <span class="metric-label">HEALTH:</span>
+                    <span class="health-score" id="health-score">--</span>
+                    <div class="health-bar-mini">
+                        <div class="health-bar-fill" id="health-bar"></div>
+                    </div>
+                </div>
+
+                <!-- Daemon Status -->
+                <div class="metric-inline">
+                    <span class="metric-label">DAEMON:</span>
+                    <span class="metric-value" id="daemon-running">--</span>
+                    <span class="metric-detail"> | PID: <span id="daemon-pid">--</span></span>
+                    <span class="metric-detail"> | Uptime: <span id="daemon-uptime">--</span></span>
+                    <span class="metric-detail"> | Context: <span id="active-context">--</span></span>
+                </div>
+
+                <!-- Issues & Optimizations -->
+                <div class="metric-inline">
+                    <span class="metric-label">ISSUES:</span>
+                    <span class="metric-value" id="issues-critical">--</span>
+                    <span class="metric-detail">critical</span>
+                    <span class="metric-detail"> | </span>
+                    <span class="metric-value" id="issues-warnings">--</span>
+                    <span class="metric-detail">warnings</span>
+                    <span class="metric-detail"> | Optimizations: </span>
+                    <span class="metric-value" id="optimizations-pending">--</span>
+                </div>
+
+                <!-- Cost & Autosave -->
+                <div class="metric-inline">
+                    <span class="metric-label">COST TODAY:</span>
+                    <span class="metric-value" id="cost-today">--</span>
+                    <span class="metric-detail"> | Autosave: </span>
+                    <span class="metric-value" id="autosave-status">--</span>
+                    <span class="metric-detail">min ago</span>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <span class="metric-label">ACTIVITY:</span>
+                    <div class="activity-log-inline" id="activity-log">
+                        <span class="activity-item">Waiting for activity...</span>
+                    </div>
+                </div>
+
+                <!-- Daemon Logs (collapsible) -->
+                <div class="logs-section" id="logs-section" style="display: none;">
+                    <div class="section-header" onclick="toggleLogs()">
+                        <span class="metric-label">DAEMON LOGS:</span>
+                        <span class="toggle-indicator" id="logs-toggle">▼</span>
+                    </div>
+                    <div class="logs-content" id="logs-content">
+                        <div class="log-entries" id="log-entries">
+                            <span class="log-line">No logs available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task List (collapsible) -->
+                <div class="tasks-section" id="tasks-section" style="display: none;">
+                    <div class="section-header" onclick="toggleTasks()">
+                        <span class="metric-label">TASKS:</span>
+                        <span class="toggle-indicator" id="tasks-toggle">▼</span>
+                    </div>
+                    <div class="tasks-content" id="tasks-content">
+                        <div class="task-list" id="task-list">
+                            <span class="task-item">No pending tasks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal Section -->
+            <div class="terminal-section">
+                <!-- Terminal Output -->
+                <div class="terminal-output" id="terminal-output">
+                    <div class="terminal-line">Oracle Terminal v1.0</div>
+                    <div class="terminal-line">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+                </div>
+
+                <!-- Available Commands -->
+                <div class="command-list">
+                    <span class="cmd-label">Available:</span>
+                    <span class="hint" onclick="fillCommand('audit')">audit</span>
+                    <span class="hint" onclick="fillCommand('status')">status</span>
+                    <span class="hint" onclick="fillCommand('verify')">verify</span>
+                    <span class="hint" onclick="fillCommand('clean')">clean</span>
+                    <span class="hint" onclick="fillCommand('optimize')">optimize</span>
+                    <span class="hint" onclick="fillCommand('help')">help</span>
+                    <button class="clear-btn-sm" onclick="clearTerminal()">clear</button>
+                </div>
+
+                <!-- Terminal Input -->
+                <div class="terminal-input">
+                    <span class="prompt">oracle&gt;</span>
+                    <input
+                        type="text"
+                        id="command-input"
+                        class="command-input"
+                        placeholder="type command and press Enter..."
+                        autocomplete="off"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <span>Oracle v1.0 - Brain Cell Architecture</span>
+            <span id="last-update">Last update: --</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "_description": "GoatedBets brand colors for consistent styling across all generated content",
+
+  "primary": {
+    "gold": "#D4822C",
+    "gold_light": "#E59A3F",
+    "gold_dark": "#B56A1A"
+  },
+
+  "backgrounds": {
+    "cream": "#F5F2EB",
+    "cream_light": "#F8F5F0",
+    "charcoal": "#1a1a2e",
+    "navy": "#16213e"
+  },
+
+  "text": {
+    "black": "#000000",
+    "dark_gray": "#333333",
+    "medium_gray": "#666666",
+    "light_gray": "#999999",
+    "white": "#FFFFFF"
+  },
+
+  "accents": {
+    "teal": "#2D8B8B",
+    "orange_highlight": "#E59A3F",
+    "neon_green": "#39FF14"
+  },
+
+  "styles": {
+    "sketch": {
+      "background": "#F5F2EB",
+      "text_primary": "#000000",
+      "text_accent": "#D4822C",
+      "highlight": "#2D8B8B"
+    },
+    "dark": {
+      "background_start": "#1a1a2e",
+      "background_end": "#16213e",
+      "text_primary": "#FFFFFF",
+      "text_accent": "#D4822C",
+      "highlight": "#39FF14"
+    }
+  }
+}

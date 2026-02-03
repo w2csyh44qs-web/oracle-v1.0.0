@@ -1,0 +1,746 @@
+/**
+ * Oracle Dashboard - Black Terminal Theme (Simplified Single-Panel)
+ *
+ * Design: Single panel with status at top, commands at bottom (like seeg)
+ * - Pure black background (#000)
+ * - Blue terminal text (#0088ff)
+ * - Compact layout
+ * - Commands visible and clickable
+ */
+
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+    background: #000;
+    color: #e0e0e0;
+    font-size: 15px;
+    line-height: 1.7;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #000;
+    border-bottom: 2px solid #0088ff;
+}
+
+.dashboard-header h1 {
+    font-size: 18px;
+    color: #0088ff;
+    letter-spacing: 2px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.view-switcher {
+    display: flex;
+    gap: 4px;
+    background: #001133;
+    border: 1px solid #0088ff;
+    padding: 2px;
+}
+
+.view-btn {
+    padding: 4px 12px;
+    background: transparent;
+    border: none;
+    color: #7799ff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-btn:hover {
+    background: #0044aa;
+    color: #ffffff;
+}
+
+.view-btn.active {
+    background: #0088ff;
+    color: #000;
+    font-weight: bold;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #888;
+    animation: pulse 2s infinite;
+}
+
+.status-dot.connected {
+    background: #00ff00;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Main Panel */
+.main-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 16px;
+    border: 1px solid #0088ff;
+}
+
+/* Status Section (Top) */
+.status-section {
+    border-bottom: 1px solid #7799ff;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.metric-inline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+}
+
+.metric-label {
+    color: #7799ff;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.metric-value {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.metric-detail {
+    color: #999999;
+    font-size: 11px;
+}
+
+/* Health Score */
+.health-score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    min-width: 40px;
+}
+
+.health-bar-mini {
+    flex: 0 0 200px;
+    height: 8px;
+    background: #001133;
+    border: 1px solid #0088ff;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background: #0088ff;
+    transition: width 0.5s ease;
+}
+
+/* Activity */
+.activity-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 6px 0;
+}
+
+.activity-log-inline {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+    color: #999999;
+}
+
+.activity-item {
+    color: #e0e0e0;
+    font-size: 11px;
+}
+
+/* Logs Section */
+.logs-section,
+.tasks-section {
+    border-top: 1px dotted #555555;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: all 0.2s;
+}
+
+.section-header:hover {
+    background: #001133;
+}
+
+.toggle-indicator {
+    color: #7799ff;
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.toggle-indicator.collapsed {
+    transform: rotate(-90deg);
+}
+
+.logs-content,
+.tasks-content {
+    padding: 8px 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.logs-content::-webkit-scrollbar,
+.tasks-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.logs-content::-webkit-scrollbar-track,
+.tasks-content::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.logs-content::-webkit-scrollbar-thumb,
+.tasks-content::-webkit-scrollbar-thumb {
+    background: #0088ff;
+    border-radius: 3px;
+}
+
+.log-entries,
+.task-list {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.log-line {
+    display: block;
+    color: #999999;
+    padding: 2px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.log-line.error {
+    color: #ff4444;
+}
+
+.log-line.warning {
+    color: #ffaa00;
+}
+
+.log-line.info {
+    color: #0088ff;
+}
+
+.task-item {
+    display: block;
+    color: #e0e0e0;
+    padding: 3px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.task-item::before {
+    content: "□";
+    position: absolute;
+    left: 0;
+    color: #7799ff;
+}
+
+.task-item.completed::before {
+    content: "✓";
+    color: #00ff00;
+}
+
+.task-item.priority::before {
+    color: #ff4444;
+}
+
+/* View Mode: Compact */
+.view-compact .metric-detail {
+    display: none;
+}
+
+.view-compact .activity-section,
+.view-compact .logs-section,
+.view-compact .tasks-section {
+    display: none;
+}
+
+.view-compact .status-section {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+/* Terminal Section (Bottom) */
+.terminal-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #000;
+}
+
+.terminal-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background: #0088ff;
+    border-radius: 4px;
+}
+
+.terminal-line {
+    color: #e0e0e0;
+    margin: 2px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.terminal-line.error {
+    color: #ff4444;
+}
+
+.terminal-line.command {
+    color: #0088ff;
+}
+
+.terminal-line.success {
+    color: #00ff00;
+}
+
+/* Command List (Above Input) */
+.command-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-top: 1px dotted #7799ff;
+    border-bottom: 1px dotted #7799ff;
+}
+
+.cmd-label {
+    color: #7799ff;
+    font-size: 11px;
+    margin-right: 4px;
+}
+
+.hint {
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid #555555;
+    color: #ffffff;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hint:hover {
+    background: #0088ff;
+    color: #000;
+    border-color: #0088ff;
+}
+
+.clear-btn-sm {
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid #7799ff;
+    color: #7799ff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.2s;
+}
+
+.clear-btn-sm:hover {
+    background: #f00;
+    color: #000;
+    border-color: #f00;
+}
+
+/* Terminal Input */
+.terminal-input {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #000a1a;
+    border-top: 1px solid #0088ff;
+}
+
+.prompt {
+    color: #0088ff;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    outline: none;
+}
+
+.command-input::placeholder {
+    color: #666666;
+}
+
+/* Footer */
+.dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background: #000;
+    border-top: 2px solid #0088ff;
+    font-size: 11px;
+    color: #999999;
+}
+
+/* Responsive Design */
+
+/* Narrow vertical windows (height > width) */
+@media (max-width: 600px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 6px;
+        padding: 8px 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .view-switcher {
+        flex: 0 0 auto;
+    }
+
+    .view-btn {
+        padding: 3px 10px;
+        font-size: 10px;
+    }
+
+    .status-indicator {
+        font-size: 10px;
+    }
+
+    .main-panel {
+        padding: 10px;
+        border-width: 1px;
+    }
+
+    .health-bar-mini {
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .metric-inline {
+        flex-wrap: wrap;
+    }
+
+    .metric-label {
+        min-width: auto;
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .metric-value,
+    .metric-detail {
+        font-size: 10px;
+    }
+
+    .health-score {
+        font-size: 16px;
+    }
+
+    .activity-log-inline {
+        font-size: 10px;
+    }
+
+    .command-list {
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 6px 8px;
+    }
+
+    .hint {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .cmd-label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .terminal-output {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .command-input {
+        font-size: 12px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+        gap: 2px;
+        padding: 4px 12px;
+        font-size: 9px;
+    }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 16px;
+    }
+
+    .status-indicator {
+        font-size: 11px;
+    }
+
+    .metric-label {
+        min-width: 70px;
+        font-size: 11px;
+    }
+
+    .metric-value {
+        font-size: 11px;
+    }
+
+    .health-score {
+        font-size: 18px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 16px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 14px;
+    }
+
+    .main-panel {
+        padding: 12px;
+    }
+
+    .metric-inline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 4px 0;
+    }
+
+    .metric-label {
+        min-width: auto;
+        font-size: 10px;
+    }
+
+    .metric-value {
+        font-size: 10px;
+    }
+
+    .metric-detail {
+        font-size: 10px;
+        display: block;
+        margin-left: 0;
+    }
+
+    .health-bar-mini {
+        flex: 1;
+        width: 100%;
+        max-width: none;
+    }
+
+    .health-score {
+        font-size: 16px;
+    }
+
+    .command-list {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 6px 10px;
+    }
+
+    .cmd-label {
+        font-size: 10px;
+    }
+
+    .hint {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .clear-btn-sm {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .terminal-output {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .terminal-input {
+        padding: 10px;
+    }
+
+    .command-input {
+        font-size: 13px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+        gap: 4px;
+        padding: 6px 16px;
+        font-size: 10px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .status-indicator {
+        font-size: 10px;
+    }
+
+    .main-panel {
+        padding: 8px;
+    }
+
+    .metric-inline {
+        padding: 3px 0;
+    }
+
+    .metric-label,
+    .metric-value,
+    .metric-detail {
+        font-size: 9px;
+    }
+
+    .health-score {
+        font-size: 14px;
+    }
+
+    .health-bar-mini {
+        height: 6px;
+    }
+
+    .activity-item {
+        font-size: 10px;
+    }
+
+    .terminal-output {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .command-list {
+        padding: 4px 8px;
+        gap: 4px;
+    }
+
+    .hint,
+    .clear-btn-sm {
+        font-size: 9px;
+        padding: 2px 4px;
+    }
+
+    .terminal-input {
+        padding: 8px;
+    }
+
+    .prompt {
+        font-size: 12px;
+    }
+
+    .command-input {
+        font-size: 12px;
+    }
+}

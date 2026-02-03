@@ -1,0 +1,49 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Trend detection outputs
+output/
+trends_*.json
+reddit_trends_*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Oracle Project-Specific Data (exclude for portability)
+oracle/data/*.json
+oracle/data/*.db
+oracle/data/*.log
+oracle/data/*.pid
+oracle/data/*.txt
+oracle/config/oracle_config.json
+oracle/config/project_config.json
+oracle/reports/*.json
+oracle/reports/*.md
+oracle/reports/*.html
+
+# Oracle Structure (keep these)
+!oracle/data/.gitkeep
+!oracle/config/.gitkeep
+!oracle/reports/.gitkeep
+!oracle/config/oracle_config.example.json
+
+# Oracle Session Files
+.claude_prompt
+data/.oracle_*.json
+
+# OS
+.DS_Store
+Thumbs.db
