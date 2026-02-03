@@ -228,6 +228,30 @@ oracle daemon install
 
 ---
 
+## Support Oracle Development
+
+If Oracle saves you time and helps your projects, consider sponsoring its development:
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-Oracle-ea4aaa?logo=github-sponsors&style=for-the-badge)](https://github.com/sponsors/w2csyh44qs-web)
+
+**Why sponsor?**
+- ⚡ Keeps Oracle actively maintained
+- 🚀 Enables new features and improvements
+- 📚 Supports comprehensive documentation
+- 🐛 Faster bug fixes and support
+- 🌟 Shows appreciation for open source work
+
+**Your support helps with:**
+- Ongoing maintenance and testing across different projects
+- Development of new features (multi-language support, cloud sync)
+- Documentation improvements and video tutorials
+- Priority support for sponsors
+- Framework and tool detection expansion
+
+Even small monthly contributions make a big difference! 🙏
+
+---
+
 ## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
