@@ -68,9 +68,20 @@ Future Oracle versions (v1.1+) include:
 
 **Perfect for:** Evaluating Oracle's core capabilities
 
-### 🥈 Sponsor ($25/month)
-**Access:** All current releases + early access
+### 🥉 Community Supporter ($5/month)
+**Access:** Support the project + early updates
 
+- ✅ Sponsor badge on your profile
+- ✅ Community Discord access
+- ✅ Early feature announcements
+- ✅ Name in release notes
+
+**Perfect for:** Community members who want to support development
+
+### 🥈 Individual Sponsor ($25/month)
+**Access:** Private releases + priority support
+
+- ✅ All Community Supporter benefits
 - ✅ Oracle v1.1+ (private releases)
 - ✅ Security scanning, code smells, technical debt
 - ✅ Early access to new features
@@ -80,30 +91,55 @@ Future Oracle versions (v1.1+) include:
 
 **Perfect for:** Individual developers and freelancers
 
-### 🥇 Professional Sponsor ($100/month)
-**Access:** All features + consultation
+### 🥇 Professional Developer ($100/month)
+**Access:** Enhanced support + consultation
 
-- ✅ All Sponsor benefits
-- ✅ 1-hour monthly consultation call
-- ✅ Custom feature requests (priority queue)
+- ✅ All Individual Sponsor benefits
+- ✅ Priority email support (24hr response)
+- ✅ **Quarterly 1-hour consultation calls** (4 hours/year)
+- ✅ Priority custom feature requests
 - ✅ Integration assistance
-- ✅ Private Discord/Slack channel
-- ✅ Logo in README (optional)
+- ✅ Name/Logo in project documentation
 
-**Perfect for:** Small teams and businesses
+**Perfect for:** Professional developers and consultants
 
-### 💎 Enterprise Collaborator ($500+/month)
-**Access:** Partnership level
+### 💼 Team Plan ($250/month)
+**Access:** Team collaboration + regular consultation
 
-- ✅ All Professional Sponsor benefits
-- ✅ Custom integrations and modules
-- ✅ Dedicated support channel
-- ✅ SLA for bug fixes and features
+- ✅ All Professional Developer benefits
+- ✅ **Up to 5 developer seats**
+- ✅ Logo in project README
+- ✅ **Quarterly 1-hour consultation** (enhanced team onboarding)
+- ✅ Integration assistance for team workflows
+- ✅ Priority feature queue access
+
+**Perfect for:** Small development teams (2-5 developers)
+
+### 🚀 Business Plan ($500/month)
+**Access:** Dedicated support + monthly consultation
+
+- ✅ All Team Plan benefits
+- ✅ **1-hour monthly consultation call** (12 hours/year)
+- ✅ SLA for bug fixes (48hr response)
 - ✅ Co-development opportunities
 - ✅ Private repository access
 - ✅ Architecture consulting
+- ✅ Custom integrations support
 
-**Perfect for:** Companies building on Oracle
+**Perfect for:** Growing companies and businesses
+
+### 💎 Enterprise Partnership ($1,000/month)
+**Access:** Priority support + custom development
+
+- ✅ All Business Plan benefits
+- ✅ **Priority support channel** (ticket-based, <4hr response during business hours)
+- ✅ Custom integrations and modules
+- ✅ Dedicated SLA terms (customizable)
+- ✅ Up to 20 hours/month support time
+- ✅ Architecture review sessions
+- ✅ Co-development partnership opportunities
+
+**Perfect for:** Large companies needing embedded support
 
 ---
 
@@ -125,9 +161,12 @@ If Oracle v1.0 meets your needs and you want advanced features:
 **GitHub Sponsors:** https://github.com/sponsors/w2csyh44qs-web
 
 **Choose your tier:**
+- $5/month - Community Supporter (early updates)
 - $25/month - Individual Sponsor (v1.1+ access)
-- $100/month - Professional Sponsor (+ consultation)
-- $500+/month - Enterprise Collaborator (+ custom development)
+- $100/month - Professional Developer (+ quarterly consultation)
+- $250/month - Team Plan (up to 5 seats + team support)
+- $500/month - Business Plan (+ monthly consultation)
+- $1,000/month - Enterprise Partnership (+ priority support channel)
 
 ### 3. Request Access
 After sponsoring:
@@ -177,7 +216,7 @@ Interested in:
 
 ## 🎓 Consultation Services
 
-**Available to Professional Sponsors and above:**
+**Available to Professional Developer tier and above:**
 
 ### What We Cover
 - **Architecture Review** - Optimize your Oracle integration
@@ -185,12 +224,20 @@ Interested in:
 - **Performance Tuning** - Optimize for large codebases
 - **Team Onboarding** - Training sessions for your team
 - **Integration Strategy** - CI/CD and workflow integration
+- **Code Review** - Oracle-specific implementation guidance
 
-### Scheduling
-- Professional Sponsors: 1 hour/month
-- Enterprise Collaborators: Custom schedule
+### Consultation Hours by Tier
+- **Professional Developer ($100/month):** 1 hour quarterly (4 hours/year)
+- **Team Plan ($250/month):** 1 hour quarterly with team focus
+- **Business Plan ($500/month):** 1 hour monthly (12 hours/year)
+- **Enterprise Partnership ($1,000/month):** Custom schedule + priority support channel
 
-**Book via:** Calendar link provided after sponsorship activation
+### One-Time Consultations
+- **$350** - Single 1-hour session (architecture, troubleshooting, or strategy)
+- **$200** - 1-hour pair-programming session
+- No commitment required for one-time sessions
+
+**Book via:** Calendar link provided after sponsorship activation or purchase
 
 ---
 
@@ -203,8 +250,9 @@ Interested in:
 - **Influence Roadmap:** Feature requests from sponsors get priority
 
 ### For Teams & Companies
-- **Cost-Effective:** $100-500/month vs $1000s for enterprise tools (SonarQube, CodeScene)
+- **Cost-Effective:** $250-1,000/month vs $1,000s for enterprise tools (SonarQube, CodeScene)
 - **Integrated Solution:** Security + Quality + Memory in one tool
+- **Scalable:** From 5-seat teams to enterprise partnerships
 - **Customizable:** We'll build what you need
 - **No Vendor Lock-in:** Code-first approach, not SaaS dependency
 
@@ -224,7 +272,7 @@ Interested in:
 **A:** You keep access to versions released during your sponsorship period. New versions require active sponsorship.
 
 ### Q: Can I sponsor as a company?
-**A:** Absolutely. Choose Professional ($100) or Enterprise ($500+) tier. We'll provide invoices.
+**A:** Absolutely. Choose Team Plan ($250), Business Plan ($500), or Enterprise Partnership ($1,000+). We'll provide invoices and accommodate custom billing arrangements.
 
 ### Q: Do you offer custom pricing for startups?
 **A:** Yes. Contact us with your use case for startup-friendly pricing.
