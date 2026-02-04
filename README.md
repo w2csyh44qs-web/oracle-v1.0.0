@@ -153,7 +153,7 @@ This allows you to:
 - [Git Integration](oracle/docs/GIT_INTEGRATION.md) - Git hooks workflow
 
 ### Development
-- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
+- [CONTRIBUTE.md](CONTRIBUTE.md) - Contribution guidelines
 - [LICENSE](LICENSE) - MIT License
 
 ---
@@ -272,7 +272,7 @@ oracle daemon install
 
 ## Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! See [CONTRIBUTE.md](CONTRIBUTE.md) for guidelines.
 
 Areas for contribution:
 - Framework support
